@@ -1,0 +1,1 @@
+﻿{"name":"7day_d1/application/loginUser.waComponent","version":"1.0.0","webComponent":"application/loginUser.waComponent/loginUser.js","loadDependencies":[{"id":"application/loginUser.waComponent/loginUser.html","path":"WEBFOLDER","type":"hmtl"},{"id":"application/loginUser.waComponent/loginUser.js","path":"WEBFOLDER","type":"script"}]}

@@ -1,0 +1,6 @@
+{
+    "name"    : "loginUser",    
+    "html"    : "loginUser.html",
+    "styles"  : [],
+    "scripts" : ["loginUser.js"]
+}

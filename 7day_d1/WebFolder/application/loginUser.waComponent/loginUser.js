@@ -21,6 +21,7 @@ function constructor (id) {
 	entra.click = function entra_click (event)// @startlock
 	{// @endlock
         //Verifico la connessione al DB
+        var utente=[];
 		var db=indexMenu.testdb(1);
 		if(db==0)
 		{
@@ -28,7 +29,23 @@ function constructor (id) {
 			return;
 		}
         
-        alert(indexMenu.loginD1(1,$$(getHtmlId('d1coduten')).getValue(), $$(getHtmlId('d1genpass')).getValue()));
+        utente=indexMenu.loginD1(1,$$(getHtmlId('d1coduten')).getValue(), $$(getHtmlId('d1genpass')).getValue());
+
+        if(utente[0]==0)
+        	alert("Utente non trovato");
+        else
+        {
+        	//CurDate.dateFormat("DD/MM/YYYY");
+        	var dataSessione = new Date();
+        	
+        	//Creo la sessione di lavoro
+        	var ok=indexMenu.userSc(utente,dataSessione.dateFormat("DD/MM/YYYY"));
+        	alert(ok);
+        
+        	
+        }
+        
+       
 	};// @lock
 
 	// @region eventManager// @startlock

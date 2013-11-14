@@ -39,8 +39,13 @@ function constructor (id) {
         	var dataSessione = new Date();
         	
         	//Creo la sessione di lavoro
-        	var ok=indexMenu.userSc(utente,dataSessione.dateFormat("DD/MM/YYYY"));
-        	alert(ok);
+        	var progsess=indexMenu.userSc(utente,dataSessione.dateFormat("DD/MM/YYYY"));
+        	if(utente[3]=="AM")
+        	{
+        		//Richiamo il menù dell'ammistratore del sistema
+        		$$('main1').loadComponent({path: '/application/indexMenuAm.waComponent', userData: {execute: true}});
+        	}
+			
         
         	
         }

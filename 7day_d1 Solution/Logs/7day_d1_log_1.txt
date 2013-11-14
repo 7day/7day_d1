@@ -14700,3 +14700,54 @@ fileHelper.getInfos() : No file matching "loginUser.waComponent/loginUser.packag
 2013-11-14 19:36:51 [com.wakanda-software.7day_d1.7day_d1] INFO - connetti a [object Object]
 2013-11-14 19:36:51 [com.wakanda-software.7day_d1.7day_d1] INFO - connetti a [object Object]
 2013-11-14 19:36:51 [com.wakanda-software.7day_d1.7day_d1] INFO - connetti a [object Object]
+2013-11-14 19:47:16 [com.wakanda-software.7day_d1.7day_d1] INFO - ==== CORE.MIN > core.min files already here ====
+2013-11-14 19:47:16 [com.wakanda-software.7day_d1.7day_d1] INFO - DEBUG : packageHasChanged  indexMenu.waPage/index.package.json   false
+2013-11-14 19:47:16 [com.wakanda-software.7day_d1.7day_d1] INFO - builds made in 11ms
+2013-11-14 19:47:17 [com.wakanda-software.7day_d1.7day_d1] INFO - ==== CORE.MIN > core.min files already here ====
+2013-11-14 19:47:17 [com.wakanda-software.7day_d1.7day_d1] INFO - DEBUG : packageHasChanged  indexMenu.waPage/index.package.json   false
+2013-11-14 19:47:17 [com.wakanda-software.7day_d1.7day_d1] INFO - builds made in 6ms
+2013-11-14 19:47:17 [com.wakanda-software.7day_d1.7day_d1] INFO - ==== CORE.MIN > core.min files already here ====
+2013-11-14 19:47:17 [com.wakanda-software.7day_d1.7day_d1] INFO - ==== CORE.MIN > core.min files already here ====
+2013-11-14 19:47:17 [com.wakanda-software.7day_d1.7day_d1] INFO - DEBUG : packageHasChanged  application/loginUser.waComponent/loginUser.package.json   false
+2013-11-14 19:47:17 [com.wakanda-software.7day_d1.7day_d1] INFO - minifyJS /application/loginUser.waComponent/loginUser.js
+2013-11-14 19:47:17 [com.wakanda-software.7day_d1.7day_d1] INFO - builds made in 52ms
+2013-11-14 19:47:17 [com.wakanda-software.7day_d1.7day_d1] INFO - DEBUG : packageHasChanged  application/loginUser.waComponent/loginUser.package.json   false
+2013-11-14 19:47:17 [com.wakanda-software.7day_d1.7day_d1] INFO - builds made in 4ms
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - connetti a [object Object]
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - connetti a [object Object]
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - connetti a [object Object]
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - connetti a [object Object]
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - connetti a [object Object]
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - ==== CORE.MIN > core.min files already here ====
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - ==== CORE.MIN > core.min files already here ====
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - DEBUG : packageHasChanged  application/indexMenuAm.waComponent/indexMenuAm.package.json   true
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - WPM.getPackageList() has been called
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - >packageListHelper.diffPackageListStorageVsWpm() - start
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - >>packageListHelper.diffPackageListStorageVsWpm() - creating result from WPM.getPackageList()
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - >> >packageListHelper.diffPackageListStorageVsWpm() - start adding packages from storage not found in WPM.getPackageList() to result
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - >> >packageListHelper.diffPackageListStorageVsWpm() - adding package :  application/loginUser.waComponent/loginUser.package.json
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - >> >packageListHelper.diffPackageListStorageVsWpm() - adding package :  indexMenu.waPage/index.package.json
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - >> <packageListHelper.diffPackageListStorageVsWpm() - stop adding packages from storage not found in WPM.getPackageList() to result
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - >> >packageListHelper.diffPackageListStorageVsWpm() - start updating timestamps of result with the ones from WPM.getPackageList() + updating buildListChanges
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - >> <packageListHelper.diffPackageListStorageVsWpm() - stop updating timestamps of result with the ones from WPM.getPackageList() + updating buildListChanges
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - <packageListHelper.diffPackageListStorageVsWpm() - stop
+2013-11-14 19:47:23 [com.wakanda-software.7day_d1.7day_d1] INFO - minifyCSS /application/indexMenuAm.waComponent/indexMenuAm.css
+2013-11-14 19:47:24 [com.wakanda-software.7day_d1.7day_d1] INFO - minifyJS /application/indexMenuAm.waComponent/indexMenuAm.js
+2013-11-14 19:47:24 [com.wakanda-software.7day_d1.7day_d1] INFO - minifyHtml /application/indexMenuAm.waComponent/indexMenuAm.html
+2013-11-14 19:47:24 [com.wakanda-software.7day_d1.7day_d1] INFO - builds made in 53ms
+2013-11-14 19:47:24 [com.wakanda-software.7day_d1.7day_d1] INFO - DEBUG : packageHasChanged  application/indexMenuAm.waComponent/indexMenuAm.package.json   false
+2013-11-14 19:47:24 [com.wakanda-software.7day_d1.7day_d1] INFO - builds made in 4ms
+2013-11-14 19:47:32 [com.wakanda-software.7day_d1.7day_d1] INFO - ==== CORE.MIN > core.min files already here ====
+2013-11-14 19:47:32 [com.wakanda-software.7day_d1.7day_d1] INFO - ==== CORE.MIN > core.min files already here ====
+2013-11-14 19:47:32 [com.wakanda-software.7day_d1.7day_d1] INFO - DEBUG : packageHasChanged  indexMenu.waPage/index.package.json   false
+2013-11-14 19:47:32 [com.wakanda-software.7day_d1.7day_d1] INFO - builds made in 4ms
+2013-11-14 19:47:32 [com.wakanda-software.7day_d1.7day_d1] INFO - DEBUG : packageHasChanged  indexMenu.waPage/index.package.json   false
+2013-11-14 19:47:32 [com.wakanda-software.7day_d1.7day_d1] INFO - builds made in 4ms
+2013-11-14 19:47:32 [com.wakanda-software.7day_d1.7day_d1] INFO - ==== CORE.MIN > core.min files already here ====
+2013-11-14 19:47:32 [com.wakanda-software.7day_d1.7day_d1] INFO - ==== CORE.MIN > core.min files already here ====
+2013-11-14 19:47:32 [com.wakanda-software.7day_d1.7day_d1] INFO - DEBUG : packageHasChanged  application/loginUser.waComponent/loginUser.package.json   false
+2013-11-14 19:47:32 [com.wakanda-software.7day_d1.7day_d1] INFO - builds made in 4ms
+2013-11-14 19:47:32 [com.wakanda-software.7day_d1.7day_d1] INFO - DEBUG : packageHasChanged  application/loginUser.waComponent/loginUser.package.json   false
+2013-11-14 19:47:32 [com.wakanda-software.7day_d1.7day_d1] INFO - builds made in 3ms
+2013-11-14 19:47:40 [com.wakanda-software.7day_d1.7day_d1] INFO - connetti a [object Object]
+2013-11-14 19:47:40 [com.wakanda-software.7day_d1.7day_d1] INFO - connetti a [object Object]

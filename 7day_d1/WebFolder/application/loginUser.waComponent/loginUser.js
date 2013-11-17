@@ -21,15 +21,19 @@ function constructor (id) {
 	entra.click = function entra_click (event)// @startlock
 	{// @endlock
         //Verifico la connessione al DB
+        //Creo utente di prova
+         
+        //indexMenu.utenteDiProva();
+      
         var utente=[];
-		var db=indexMenu.testdb(1);
+		var db=indexMenu.testdb($$(getHtmlId('aziende')).getValue());
 		if(db==0)
 		{
 			alert("DataBase non configurato. Impossibile proseguire");
 			return;
 		}
         
-        utente=indexMenu.loginD1(1,$$(getHtmlId('d1coduten')).getValue(), $$(getHtmlId('d1genpass')).getValue());
+        utente=indexMenu.loginD1($$(getHtmlId('aziende')).getValue(),$$(getHtmlId('d1coduten')).getValue(), $$(getHtmlId('d1genpass')).getValue());
 
         if(utente[0]==0)
         	alert("Utente non trovato");
@@ -43,7 +47,7 @@ function constructor (id) {
         	if(utente[3]=="AM")
         	{
         		//Richiamo il menù dell'ammistratore del sistema
-        		$$('main1').loadComponent({path: '/application/indexMenuAm.waComponent', userData: {execute: true}});
+        		$$('main1').loadComponent({path: '/application/indexMenuAm.waComponent', userData: {utente_: utente, progsess_: progsess}});
         	}
 			
         

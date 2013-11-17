@@ -47,7 +47,7 @@ function constructor (id) {
         	if(utente[3]=="AM")
         	{
         		//Richiamo il menù dell'ammistratore del sistema
-        		$$('main1').loadComponent({path: '/application/indexMenuAm.waComponent', userData: {utente_: utente, progsess_: progsess}});
+        		$$('main1').loadComponent({path: '/application/indexMenuAm.waComponent', userData: {utente: utente, progsess: progsess}});
         	}
 			
         

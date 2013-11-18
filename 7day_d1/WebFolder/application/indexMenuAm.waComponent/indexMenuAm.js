@@ -15,7 +15,6 @@ function constructor (id) {
 	// @region namespaceDeclaration// @startlock
 	var applicazioneTest = {};	// @icon
 	var logout = {};	// @icon
-	var testsess = {};	// @button
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
@@ -30,21 +29,9 @@ function constructor (id) {
 		window.location='/indexMenu.waPage';
 	};// @lock
 
-	testsess.click = function testsess_click (event)// @startlock
-	{// @endlock
-		//Verifca della sessione (utente, d1datsess, progsess, time) 
-		//dataSessione.dateFormat("DD/MM/YYYY")
-		var dataSessione = new Date();
-		var sessok=indexMenu.userScVal(data.userData.utente,dataSessione.dateFormat("DD/MM/YYYY"),data.userData.progsess,10);
-		
-		alert(sessok);
-		
-	};// @lock
-
 	// @region eventManager// @startlock
 	WAF.addListener(this.id + "_applicazioneTest", "click", applicazioneTest.click, "WAF");
 	WAF.addListener(this.id + "_logout", "click", logout.click, "WAF");
-	WAF.addListener(this.id + "_testsess", "click", testsess.click, "WAF");
 	// @endregion// @endlock
 
     

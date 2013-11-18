@@ -23,8 +23,10 @@ function constructor (id) {
 	{// @endlock
 		var dataSessione = new Date();
 		var sessok=indexMenu.userScVal(data.userData.utente,dataSessione.dateFormat("DD/MM/YYYY"),data.userData.progsess,$$(getHtmlId('minuti')).getValue());
-		
 		alert(sessok);
+		
+		if(sessok)
+			$$('main1').loadComponent({path: '/application/loginUser.waComponent', userData: {execute: true}});
 	};// @lock
 
 	back.click = function back_click (event)// @startlock

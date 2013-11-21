@@ -2890,17 +2890,18 @@ function formatYear(val, deltaAnnoFuturo)
 
 function chkCapFocus(field)
 {
+	
 	if (!erroreCap)
 	{
     	if (field.value!="")
     	{
     		if (field.value.search("^[0-9]+$") == -1)
     		{
-    			alert("il campo contiene dei caratteri non ammessi")
-		  		field.focus();
-    		}
+    			//alert("il campo contiene dei caratteri non ammessi")
+		  				
     	}
     	erroreCap=false;
+		}
 	}
 }
 
@@ -2911,26 +2912,23 @@ function chkCapFocus(field)
  */
 function chkCapBlur(field)
 {
-	/*if (field.value!="")
-	{
-		if (field.value.search("^[0-9]+$") == -1)
-		{
-    		erroreCap=true;
-			alert("il campo contiene dei caratteri non ammessi")
-	  		field.focus();
+	var elem = document.getElementById(field.id);
 
-		}
-	}*/
 	if (field.getValue()!="")
 	{
 		if (field.getValue().search("^[0-9]+$") == -1)
 		{
     		erroreCap=true;
-			alert("il campo contiene dei caratteri non ammessi");
-			field.setValue("");
-	  		field.focus();
+			//alert("il campo contiene dei caratteri non ammessi");
+			errorColorCode(elem);
+			blur_err="true"
+			
+		}else{
+			elem.setAttribute("style","border:1px solid #999999");
+    	}
 
-		}
+	}else{
+		elem.setAttribute("style","border:1px solid #999999");
 	}
 }
 
@@ -2941,6 +2939,7 @@ function chkCapBlur(field)
  */
 function chkCoNoFocus(field)
 {
+	var elem = document.getElementById(field.id);
 	/*if (!erroreCoNo)
 	{
     	if (field.value!="")
@@ -2962,12 +2961,17 @@ function chkCoNoFocus(field)
     		campo=campo.replace(/\s/g,"");
     		if (campo.search("^[a-zA-Z,.'-]+$") == -1)
     		{
-    			alert("il campo contiene dei caratteri non ammessi");
-    			field.setValue("");
-		  		field.focus();
+    			//alert("il campo contiene dei caratteri non ammessi");
+    			errorColorCode(elem);
+				blur_err="true"
+			
+			}else{
+				elem.setAttribute("style","border:1px solid #999999");
     		}
     	}
     	erroreCoNo=false;
+	}else{
+		elem.setAttribute("style","border:1px solid #999999");
 	}
 }
 
@@ -2978,6 +2982,7 @@ function chkCoNoFocus(field)
  */
 function chkCoNoBlur(field)
 {
+	var elem = document.getElementById(field.id);
 	/*if (field.value!="")
 	{
 		var campo=field.value.replace(/\s/g,"");
@@ -2995,10 +3000,15 @@ function chkCoNoBlur(field)
 		if (campo.search("^[a-zA-Z,.'-]+$") == -1)
 		{
 			erroreCoNo=true;
-			alert("il campo contiene dei caratteri non ammessi");
-			field.setValue("");
-	  		field.focus();
+			//alert("il campo contiene dei caratteri non ammessi");
+			errorColorCode(elem);
+				blur_err="true"
+			
+			}else{
+				elem.setAttribute("style","border:1px solid #999999");
 		}
+	}else{
+		elem.setAttribute("style","border:1px solid #999999");
 	}
 }
 
@@ -3009,15 +3019,22 @@ function chkCoNoBlur(field)
  */
 function chkDescBlur(field)
 {
+	var elem = document.getElementById(field.id);
 	if (field.value!="")
 	{
 		var campo=field.value.replace(/\s/g,"");
 		if (campo.search("^[a-zA-Z0-9.'()/,%*\-]+$") == -1)
 		{
 			erroreNome=true;
-			alert("il campo contiene dei caratteri non ammessi")
-	  		field.focus();
+			//alert("il campo contiene dei caratteri non ammessi")
+	  		errorColorCode(elem);
+				blur_err="true"
+			
+			}else{
+				elem.setAttribute("style","border:1px solid #999999");
 		}
+	}else{
+		elem.setAttribute("style","border:1px solid #999999");
 	}
 }
 /**
@@ -3034,7 +3051,7 @@ function chkDescFocus(field)
     		var campo=field.value.replace(/\s/g,"");
     		if (campo.search("^[a-zA-Z0-9.'()/,%*\-]+$") == -1)
     		{
-    			alert("il campo contiene dei caratteri non ammessi")
+    			//alert("il campo contiene dei caratteri non ammessi")
 		  		field.focus();
     		}
     	}
@@ -3049,15 +3066,22 @@ function chkDescFocus(field)
  */
 function chkNomeBlur(field)
 {
+	var elem = document.getElementById(field.id);
 	if (field.value!="")
 	{
 		var campo=field.value.replace(/\s/g,"");
 		if (campo.search("^[a-zA-Z0-9.'-]+$") == -1)
 		{
 			erroreNome=true;
-			alert("il campo contiene dei caratteri non ammessi")
-	  		field.focus();
+			//alert("il campo contiene dei caratteri non ammessi")
+	  		errorColorCode(elem);
+				blur_err="true"
+			
+			}else{
+				elem.setAttribute("style","border:1px solid #999999");
 		}
+	}else{
+		elem.setAttribute("style","border:1px solid #999999");
 	}
 }
 /**
@@ -3074,7 +3098,7 @@ function chkNomeFocus(field)
     		var campo=field.value.replace(/\s/g,"");
     		if (campo.search("^[a-zA-Z0-9.'-]+$") == -1)
     		{
-    			alert("il campo contiene dei caratteri non ammessi")
+    			//alert("il campo contiene dei caratteri non ammessi")
 		  		field.focus();
     		}
     	}
@@ -3097,7 +3121,7 @@ function chkIndFocus(field)
     		if (campo.search("^[a-zA-Z0-9.',/()-]+$") == -1)
     		{
     			erroreInd=true;
-    			alert("il campo contiene dei caratteri non ammessi")
+    			//alert("il campo contiene dei caratteri non ammessi")
     	  		field.focus();
     		}
     	}
@@ -3112,6 +3136,7 @@ function chkIndFocus(field)
  */
 function chkIndBlur(field)
 {
+	
 	/*if (field.value!="")
 	{
 		var campo=field.value.replace(/\s/g,"");
@@ -3132,7 +3157,7 @@ function chkIndBlur(field)
 		if (campo.search("^[a-zA-Z0-9.',/()-]+$") == -1)
 		{
 			erroreInd=true;
-			alert("il campo contiene dei caratteri non ammessi")
+			//alert("il campo contiene dei caratteri non ammessi")
 	  		field.focus(true);
 		}
 	}
@@ -3353,6 +3378,7 @@ function nascondiAttenderePrego()
  *******************************************************************************/
 function chkMailBlur(field)
 {
+	var elem = document.getElementById(field.id);
 	if (field.getValue()!="")
 	{
 		var campo=field.getValue();
@@ -3360,10 +3386,15 @@ function chkMailBlur(field)
 		if (campo.search("^[a-zA-Z0-9.@-]+$") == -1)
 		{
 			erroreNome=true;
-			alert("il campo contiene dei caratteri non ammessi")
-			field.setValue("");
-	  		field.focus();
+			//alert("il campo contiene dei caratteri non ammessi")
+			errorColorCode(elem);
+			blur_err="true"
+			
+		}else{
+			elem.setAttribute("style","border:1px solid #999999");
 		}
+	}else{
+		elem.setAttribute("style","border:1px solid #999999");
 	}
 }
 
@@ -3375,6 +3406,7 @@ function chkMailBlur(field)
 
 function chkIndDescBlur(field)
 {
+	var elem = document.getElementById(field.id);
 	if (field.getValue()!="")
 	{
 		var campo=field.getValue();
@@ -3382,10 +3414,15 @@ function chkIndDescBlur(field)
 		if (campo.search("^[a-zA-Z0-9èéìàùό','.°*^\/]+$") == -1)
 		{
 			erroreCoNo=true;
-			alert("il campo contiene dei caratteri non ammessi");
-			field.setValue("");
-	  		field.focus();
+			//alert("il campo contiene dei caratteri non ammessi");
+					errorColorCode(elem);
+			blur_err="true"
+			
+		}else{
+			elem.setAttribute("style","border:1px solid #999999");
 		}
+	}else{
+		elem.setAttribute("style","border:1px solid #999999");
 	}
 }
 
@@ -3397,6 +3434,7 @@ function chkIndDescBlur(field)
 
 function chkLocazioneBlur(field)
 {
+	var elem = document.getElementById(field.id);
 	if (field.getValue()!="")
 	{
 		var campo=field.getValue();
@@ -3404,10 +3442,132 @@ function chkLocazioneBlur(field)
 		if (campo.search("^[a-zA-Zèéìàùό']+$") == -1)
 		{
 			erroreCoNo=true;
-			alert("il campo contiene dei caratteri non ammessi");
-			field.setValue("");
-	  		field.focus();
+			//alert("il campo contiene dei caratteri non ammessi");
+			errorColorCode(elem);
+			blur_err="true"
+			
+		}else{
+			elem.setAttribute("style","border:1px solid #999999");
 		}
+	
+	}else{
+		elem.setAttribute("style","border:1px solid #999999");
 	}
 }
 
+
+function Keypress_Alfa(value)
+{
+	//console.log(value);
+	value=String.fromCharCode(value);
+	//console.log(value);
+	//caratteri permessi:alfabetici e speciali tranne(+-*/:!"£$%&/(()=) 
+	value=value.replace(/\s/g,"");
+	 if (value.search("^[a-zA-Zèéìàùό']+$") == -1)
+		{
+			return false;
+	  	}else{
+	  	    return true;
+		}
+	
+}
+
+
+function Keypress_Num(value)
+{
+	console.log(value);
+	value=String.fromCharCode(value);
+	console.log(value);
+	//caratteri permessi:alfabetici e speciali tranne(+-*/:!"£$%&/(()=) 
+	value=value.replace(/\s/g,"");
+	 if (value.search("^[0-9]+$") == -1)
+		{
+			return false;
+	  	}else{
+	  	    return true;
+		}
+	
+}
+
+function Keypress_AlfaNumExt(value)
+{
+	console.log(value);
+	value=String.fromCharCode(value);
+	console.log(value);
+	//caratteri permessi:alfabetici e speciali 
+	value=value.replace(/\s/g,"");
+	 if (value.search("^[a-zA-Zèéìàùό'0-9/\°,@'òàèéùì^*-%&()=]+$. : ; _") == -1)
+		{
+			return false;
+	  	}else{
+	  	    return true;
+		}
+	
+}
+
+function Keypress_NumDecimali(value)
+{
+	console.log(value);
+	value=String.fromCharCode(value);
+	console.log(value);
+	//caratteri permessi:alfabetici e speciali tranne(+-*/:!"£$%&/(()=) 
+	value=value.replace(/\s/g,"");
+	 if (value.search("^[0-9,]+$") == -1)
+		{
+			return false;
+	  	}else{
+	  	    return true;
+		}
+	
+}
+
+function chkAlfa(field){
+		var elem = document.getElementById(field.id);
+		if (field.getValue()!="" && isAllAlfaNum(field.getValue(),true)!=true){
+			//alert("questo campo non accetta caratteri speciali");
+			errorColorCode(elem);
+			blur_err="true"
+			
+		}else{
+			elem.setAttribute("style","border:1px solid #999999");
+		}		
+	}
+
+function chkSSL(field){
+		var elem = document.getElementById(field.id);
+		if (field.getValue()!="" && field.getValue()!=1 && field.getValue()!=0 ){
+			//alert("questo campo non accetta caratteri speciali");
+			errorColorCode(elem);
+			blur_err="true"
+			
+		}else{
+			elem.setAttribute("style","border:1px solid #999999");
+		}		
+	}
+
+function errorColorCode(elem){
+	elem.setAttribute("style","border:1px solid #9F000F");
+}
+
+function chklunghezza(valore,lunghezza){
+	if (valore.length<50){
+		return valore;
+	}else{
+		return valore.substring(0,50);
+	}
+}
+
+/*function Keypress_NumChar(value)
+{
+	console.log(value);
+	value=String.fromCharCode(value);
+	console.log(value);
+	value=value.replace(/\s/g,"");
+	 if (value.search("^[0-9,]+$") == -1)
+		{
+			return false;
+	  	}else{
+	  	    return true;
+		}
+	
+}*/

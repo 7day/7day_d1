@@ -219,37 +219,49 @@ WAF.onAfterInit = function onAfterInit() {
 
 	d1genema3.blur = function d1genema3_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),50));
 		chkMailBlur(this);
 	};
 
 	d1genema2.blur = function d1genema2_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),50));
 		chkMailBlur(this);
 	};
 
 	d1genema1.blur = function d1genema1_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),50));
 		chkMailBlur(this);
 	};
 	
 
 	d1gendb.blur = function d1gendb_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),50));
 		chkAlfa($$('d1gendb'));
 	};
 
 	d1genhost.blur = function d1genhost_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),100));
 		chkAlfa($$('d1genhost'));
 	};
 	
 	$("#d1gencitt").keypress(function() {
+		//console.log(chklunghezza($(this).val(),50).length);
+		if(chklunghezza($(this).val(),50).length<50){
 			return Keypress_Alfa(event.charCode);
+		}else{
+			return false;
+		}
+			
 	});
 	
 
 	d1gencitt.blur = function d1gencitt_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),50));
 		chkLocazioneBlur(this);
 	};
 	
@@ -257,26 +269,34 @@ WAF.onAfterInit = function onAfterInit() {
 
 	d1genindi.blur = function d1genindi_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),100));
 		chkIndDescBlur(this);
 	};
 
 	d1genuser.blur = function d1genuser_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),50));
 		chkAlfa($$('d1genuser'));
 		
 	};
 	
 	$("#d1genprov").keypress(function() {
+		if(chklunghezza($(this).val(),2).length<2){
 			return Keypress_Alfa(event.charCode);
+		}else{
+			return false;
+		}
 	});
      
 	d1genprov.blur = function d1genprov_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),2));
 		chkLocazioneBlur(this);
 	};
 	
 
 	$("#d1genrags").keypress(function() {
+		
 			return Keypress_Alfa(event.charCode);
 	});
 
@@ -284,6 +304,7 @@ WAF.onAfterInit = function onAfterInit() {
 
 	d1genrags.blur = function d1genrags_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),100));	
 		chkCoNoBlur(this);
 	};
 	
@@ -295,6 +316,7 @@ WAF.onAfterInit = function onAfterInit() {
      
 	d1genssl.blur = function d1genssl_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),10));
 		chkSSL($$('d1genssl'));
 		
 	};
@@ -308,17 +330,19 @@ WAF.onAfterInit = function onAfterInit() {
 
 	d1genport.blur = function d1genport_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),10));
 		chkCapBlur(this);
 		
 	};
 	
 	
-	  $("#d1gentel").keypress(function() {
+	$("#d1gentel").keypress(function() {
 			return Keypress_Num(event.charCode);
 	});
 
 	d1gentel.blur = function d1gentel_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),10));
 		chkCapBlur(this);
 	};
 	
@@ -329,6 +353,7 @@ WAF.onAfterInit = function onAfterInit() {
      
 	d1genfax.blur = function d1genfax_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),20));
 		chkCapBlur(this);
 	};
 	
@@ -338,17 +363,20 @@ WAF.onAfterInit = function onAfterInit() {
      
 	d1gencap.blur = function d1gencap_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),5));
 		chkCapBlur(this);
 	};
 	
 
 	d1codazie.keydown = function d1codazie_keydown (event)
 	{
+
 		return Keypress_Num(event);
 	};
 
 	d1codazie.blur = function d1codazie_blur (event)
 	{
+		this.setValue(chklunghezza(this.getValue(),5));
 		chkCapBlur(this);
 	};
 	

@@ -284,7 +284,7 @@ WAF.onAfterInit = function onAfterInit() {
 		if(chklunghezza($(this).val(),2).length<2){
 			return Keypress_Alfa(event.charCode);
 		}else{
-			return false;
+			//return false;
 		}
 	});
      

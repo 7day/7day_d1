@@ -217,11 +217,29 @@ WAF.onAfterInit = function onAfterInit() {
 		blur_err="false";
 	};
 
+	$("#d1genema3").keypress(function() {
+		//console.log(chklunghezza($(this).val(),50).length);
+		if(chklunghezza($(this).val(),100).length<100){
+			return Keypress_AlfaNumExt(event.charCode);
+		}else{
+			return false;
+		}
+			
+	});
 	d1genema3.blur = function d1genema3_blur (event)
 	{
 		this.setValue(chklunghezza(this.getValue(),50));
 		chkMailBlur(this);
 	};
+	$("#d1genema2").keypress(function() {
+		//console.log(chklunghezza($(this).val(),50).length);
+		if(chklunghezza($(this).val(),100).length<100){
+			return Keypress_AlfaNumExt(event.charCode);
+		}else{
+			return false;
+		}
+			
+	});
 
 	d1genema2.blur = function d1genema2_blur (event)
 	{
@@ -229,18 +247,47 @@ WAF.onAfterInit = function onAfterInit() {
 		chkMailBlur(this);
 	};
 
+	$("#d1genema1").keypress(function() {
+		//console.log(chklunghezza($(this).val(),50).length);
+		if(chklunghezza($(this).val(),100).length<100){
+			return Keypress_AlfaNumExt(event.charCode);
+		}else{
+			return false;
+		}
+			
+	});
+	
 	d1genema1.blur = function d1genema1_blur (event)
 	{
 		this.setValue(chklunghezza(this.getValue(),50));
 		chkMailBlur(this);
 	};
 	
+	$("#d1gendb").keypress(function() {
+		//console.log(chklunghezza($(this).val(),50).length);
+		if(chklunghezza($(this).val(),50).length<50){
+			return Keypress_Alfa(event.charCode);
+		}else{
+			return false;
+		}
+			
+	});
 
 	d1gendb.blur = function d1gendb_blur (event)
 	{
 		this.setValue(chklunghezza(this.getValue(),50));
 		chkAlfa($$('d1gendb'));
 	};
+	
+	$("#d1genhost").keypress(function() {
+		//console.log(chklunghezza($(this).val(),50).length);
+		if(chklunghezza($(this).val(),50).length<50){
+			return Keypress_Alfa(event.charCode);
+		}else{
+			return false;
+		}
+			
+	});
 
 	d1genhost.blur = function d1genhost_blur (event)
 	{
@@ -265,6 +312,13 @@ WAF.onAfterInit = function onAfterInit() {
 		chkLocazioneBlur(this);
 	};
 	
+	$("#d1genindi").keypress(function() {
+		if(chklunghezza($(this).val(),200).length<200){
+			return Keypress_AlfaNum(event.charCode);
+		}else{
+			return false;
+		}
+	});
 	
 
 	d1genindi.blur = function d1genindi_blur (event)
@@ -272,6 +326,14 @@ WAF.onAfterInit = function onAfterInit() {
 		this.setValue(chklunghezza(this.getValue(),100));
 		chkIndDescBlur(this);
 	};
+	
+	$("#d1genuser").keypress(function() {
+		if(chklunghezza($(this).val(),50).length<50){
+			return Keypress_AlfaNum(event.charCode);
+		}else{
+			return false;
+		}
+	});
 
 	d1genuser.blur = function d1genuser_blur (event)
 	{
@@ -284,7 +346,7 @@ WAF.onAfterInit = function onAfterInit() {
 		if(chklunghezza($(this).val(),2).length<2){
 			return Keypress_Alfa(event.charCode);
 		}else{
-			//return false;
+			return false;
 		}
 	});
      
@@ -296,8 +358,11 @@ WAF.onAfterInit = function onAfterInit() {
 	
 
 	$("#d1genrags").keypress(function() {
-		
+		if(chklunghezza($(this).val(),100).length<100){
 			return Keypress_Alfa(event.charCode);
+		}else{
+			return false;
+		}
 	});
 
      
@@ -310,7 +375,11 @@ WAF.onAfterInit = function onAfterInit() {
 	
 	
 	$("#d1genssl").keypress(function() {
+		if(chklunghezza($(this).val(),1).length<1){
 			return Keypress_Num(event.charCode);
+		}else{
+			return false;
+		}
 	});
 
      
@@ -323,7 +392,11 @@ WAF.onAfterInit = function onAfterInit() {
 
 	
 	$("#d1genport").keypress(function() {
+		if(chklunghezza($(this).val(),10).length<10){
 			return Keypress_Num(event.charCode);
+		}else{
+			return false;
+		}
 	});
 
 	
@@ -333,11 +406,16 @@ WAF.onAfterInit = function onAfterInit() {
 		this.setValue(chklunghezza(this.getValue(),10));
 		chkCapBlur(this);
 		
+		
 	};
 	
 	
 	$("#d1gentel").keypress(function() {
+		if(chklunghezza($(this).val(),10).length<10){
 			return Keypress_Num(event.charCode);
+		}else{
+			return false;
+		}
 	});
 
 	d1gentel.blur = function d1gentel_blur (event)
@@ -347,7 +425,11 @@ WAF.onAfterInit = function onAfterInit() {
 	};
 	
      $("#d1genfax").keypress(function() {
+     	if(chklunghezza($(this).val(),20).length<20){
 			return Keypress_Num(event.charCode);
+		}else{
+			return false;
+		}
 	});
 	
      
@@ -358,7 +440,11 @@ WAF.onAfterInit = function onAfterInit() {
 	};
 	
     $("#d1gencap").keypress(function() {
+    	if(chklunghezza($(this).val(),5).length<5){
 			return Keypress_Num(event.charCode);
+		}else{
+			return false;
+		}
 	});
      
 	d1gencap.blur = function d1gencap_blur (event)
@@ -368,11 +454,14 @@ WAF.onAfterInit = function onAfterInit() {
 	};
 	
 
-	d1codazie.keydown = function d1codazie_keydown (event)
-	{
-
-		return Keypress_Num(event);
-	};
+	$("#d1codazie").keypress(function() {
+		if(chklunghezza($(this).val(),5).length<5){
+			return Keypress_Num(event.charCode);
+		}else{
+			return false;
+		}
+	});
+     
 
 	d1codazie.blur = function d1codazie_blur (event)
 	{
@@ -380,10 +469,28 @@ WAF.onAfterInit = function onAfterInit() {
 		chkCapBlur(this);
 	};
 	
-	d1desvar2.keydown = function d1desvar2_keydown (event)
-	{
-		return Keypress_AlfaNumExt(event);
-	};
+	$("#d1desvar2").keypress(function() {
+		if(chklunghezza($(this).val(),50).length<50){
+			return Keypress_AlfaNumExt(event.charCode);
+		}else{
+			return false;
+		}
+	});
+	$("#d1desvar1").keypress(function() {
+		if(chklunghezza($(this).val(),50).length<50){
+			return Keypress_AlfaNumExt(event.charCode);
+		}else{
+			return false;
+		}
+	});
+	$("#d1desvar3").keypress(function() {
+		if(chklunghezza($(this).val(),50).length<50){
+			return Keypress_AlfaNumExt(event.charCode);
+		}else{
+			return false;
+		}
+	});
+    
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)
 	{

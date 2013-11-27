@@ -3475,9 +3475,9 @@ function Keypress_Alfa(value)
 
 function Keypress_Num(value)
 {
-	console.log(value);
+	//console.log(value);
 	value=String.fromCharCode(value);
-	console.log(value);
+	//console.log(value);
 	//caratteri permessi:alfabetici e speciali tranne(+-*/:!"£$%&/(()=) 
 	value=value.replace(/\s/g,"");
 	 if (value.search("^[0-9]+$") == -1)
@@ -3496,7 +3496,23 @@ function Keypress_AlfaNumExt(value)
 	console.log(value);
 	//caratteri permessi:alfabetici e speciali 
 	value=value.replace(/\s/g,"");
-	 if (value.search("^[a-zA-Zèéìàùό'0-9/\°,@'òàèéùì^*-%&()=]+$. : ; _") == -1)
+	 if (value.search("^[a-zA-Z0-9òàèéùìèéìàùό/\°,@'.:;_=()%&*-]+$") == -1)
+		{
+			return false;
+	  	}else{
+	  	    return true;
+		}
+	
+}
+
+function Keypress_AlfaNum(value)
+{
+	console.log(value);
+	value=String.fromCharCode(value);
+	console.log(value);
+	//caratteri permessi:alfabetici e speciali 
+	value=value.replace(/\s/g,"");
+	 if (value.search("^[a-zA-Z0-9èéìàùό]+$") == -1)
 		{
 			return false;
 	  	}else{

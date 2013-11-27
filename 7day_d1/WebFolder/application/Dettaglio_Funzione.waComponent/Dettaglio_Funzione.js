@@ -287,7 +287,7 @@ function CheckDB(){
  		}
 		catch(e) { // in case of error
     		alert("impostare i dati della connessione al database nel menu settings");
-    		document.location.href = "/Default.waPage/index.html";
+    		document.location.href = "/default.waPage/index.html";
  		}
  	}
 }
